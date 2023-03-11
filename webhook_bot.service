@@ -1,0 +1,10 @@
+[Unit]
+Description="Telegram bot with webhook support"
+After=network.target
+
+[Service]
+WorkingDirectory=/root/bot
+ExecStart=/root/bot/.venv/bin/python3 /root/bot/bot.py
+
+[Install]
+WantedBy=multi-user.target
